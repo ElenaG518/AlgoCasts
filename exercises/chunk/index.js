@@ -21,18 +21,18 @@ function chunk(array, size) {
 module.exports = chunk;
 
 
-// function chunk(array, size) {
-//   const chunked = [];
-//   for (let element of array) {
-//     // retrieve the last array element in chunked array to see if we can add
-//     //more items to it
-//     const last = chunked[chunked.length-1];
-//     //if chunked is empty, or last is full
-//     if (!last || last.length === size) {
-//       // add an new array element to chunked
-//       chunked.push([element]);
-//     // add element to last array element in chunked
-//     } else {last.push(element)}
-//   }
-//   return chunked;
-// }
+function chunk(array, size) {
+  const chunked = [];
+  for (let element of array) {
+    // retrieve the last array element in chunked array to see if we can add
+    //more items to it
+    const last = chunked[chunked.length-1];
+    //if chunked is empty, or last is full
+    if (!last || last.length === size) {
+      // add an new array element to chunked
+      chunked.push([element]);
+    // add element to last array element in chunked
+    } else {last.push(element)}
+  }
+  return chunked;
+}
