@@ -8,8 +8,10 @@
 //   capitalize('look, it is working!') --> 'Look, It Is Working!'
 
 function capitalize(str) {
+  // capitalize the very first character of the string
   let newStr = str[0].toUpperCase();
 
+  // for any subsequent string, if the character preceeding it is a space, then the  character will need to be capitalized
   for (let i=1; i< str.length; i++) {
     if ( str[i-1]=== ' ') {
       newStr+=str[i].toUpperCase();
