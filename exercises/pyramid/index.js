@@ -14,20 +14,28 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n) {
+function pyramid(n, row=0, str='') {
   // if we have reached base case and end of the pyramid, exit function
-  if(n=== row) {
+  if(n === row) {
     return;
   }
 
   // if string recheases maximum length, print new string and start a new row 
-  if (2*n-1 === str.length) {
+  if (str.length === 2*n-1) {
     console.log(str);
     return pyramid(n, row +1);
   }
 
-  // otherwise work on adding more characters to string
-  if (str.length )
+  const midpoint = Math.floor((2*n-1)/2);
+  
+  let add;
+  if (midpoint - row <= str.length && midpoint + row >= str.length) {
+    add="#";
+  } else {
+    add=" ";
+  }
+
+  pyramid(n, row, str+add);    
 
 }
 
