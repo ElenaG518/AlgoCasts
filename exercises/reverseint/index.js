@@ -11,6 +11,10 @@
 function reverseInt(n) {  
 // convert n to a string, then string to an array, then reverse   array, then back to a string
   const reversed = n.toString().split('').reverse().join('');
+  
+  // if (n < 0) return parseInt(reversed) * -1;
+  
+  // return parseInt(reversed);
 
 // turn string into number, which will get rid of any characters that are not numbers, in this case the sign, and delete 
 // any leading zeros.  then multiply by the sign 

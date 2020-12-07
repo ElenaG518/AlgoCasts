@@ -13,7 +13,6 @@
 //   buzz
 
 function fizzBuzz(n) {
-
   for (let i=1; i<=n; i++) { 
     if(i%15==0) {console.log('fizzbuzz')}
     else if(i%3==0) {console.log('fizz') }
@@ -29,7 +28,7 @@ module.exports = fizzBuzz;
 // this doesn't work
 
 // for (let x=1; x<=n; x++) {
-//   switch (x) {
+//   switch (x%15 === 0 || x%3 === 0 || x%5 === 0) {
 //     case x%3==0: {console.log("fizz") }; break;
 //     case x%5==0: {console.log("buzz") };break;
 //     case x%15==0: {console.log("fizzbuzz") };break;
